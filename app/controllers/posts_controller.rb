@@ -40,7 +40,6 @@ class PostsController < ApplicationController
   end
 
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
       redirect_to posts_url, notice: 'Post was successfully destroyed.'
