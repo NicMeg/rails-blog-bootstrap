@@ -1,12 +1,16 @@
+<% content_for :page_title, "Home"%>
 
-<% content_for :page_title, "Home"  %>
+<div class="row">
+  <div class="col-8">
+      <p class="h4">Latest Posts</p>
 
-<h2>Latest Posts</h2>
+      <% @posts.each do |post| %>
+        <%= render partial: "posts/post", locals: { post: post} %>
+      <% end %>
+  </div>
+  <div class="col-4">
+    <p class="h4">About</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et praesentium perferendis architecto quae magni assumenda non delectus maiores, facere totam unde iste nostrum sapiente! Est dicta dignissimos possimus culpa fuga!</p>
+  </div>
+</div>
 
-<% @posts.each do |post| %>
-  <%= render partial: "posts/post", locals: { post: post} %>
-<% end %>
-
-<% content_for :scripts do  %>
-  This will be displayed at the bottom of the body tag
-<% end %>

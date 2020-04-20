@@ -1,5 +1,25 @@
-#topnav {
-  li {
-    display: inline;
-  }
+.page-nav {
+background: #ddd;
+margin-bottom: 20px;
 }
+
+
+#topnav {
+  margin-top:10px;
+    li {
+      display: inline;
+      padding: 5px 7px;
+    }
+  }
+
+  #site-name {
+    font-size: 22px;
+    margin-top: 10px;
+
+  }
+
+  #footer {
+    border-top: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+  }
