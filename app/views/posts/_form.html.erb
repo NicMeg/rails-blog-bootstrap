@@ -26,6 +26,12 @@
     <%= form.text_area :body %>
   </div>
 
+   <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.all.collect{ |c| [c.title, c.id] } %> 
+    
+  </div>
+
   <div class="field">
     <%= form.label :active %>
     <%= form.check_box :active %>
