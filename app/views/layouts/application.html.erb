@@ -11,8 +11,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="container">
+  <body style="background-image: url(<%= asset_url('background.jpg') %>);">
+    <div class="container bg-white">
       <div class="row">
         <div class="col page-nav">
           <%= render partial: "layouts/menu" %>
