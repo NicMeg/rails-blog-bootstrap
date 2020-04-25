@@ -1,10 +1,9 @@
 class PublicController < ApplicationController
   
   def homepage
-    @posts = Post.all
+    @posts = Post.active.order_by_latest_first.limit_2
     @categories = Category.all
   end
-  
   def about
   end
 
@@ -13,5 +12,5 @@ class PublicController < ApplicationController
 
   def contact
   end
-
 end
+

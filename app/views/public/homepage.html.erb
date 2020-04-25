@@ -5,7 +5,7 @@
       <p class="h4">Latest Posts</p>
 
       <% @posts.each do |post| %>
-        <%= render partial: "posts/post", locals: { post: post} %>
+        <%= render partial: "posts/post", locals: { post: post } %>
       <% end %>
   </div>
   <div class="col-4">
@@ -15,7 +15,7 @@
   
   <p class="h4">categories</p> 
   <% @categories.each do |category| %>
-   <p><% category.title %> - <%= category.total %></p>
+    <p><%= category.title %> - <%= category.total_count %></p>
   <% end %>
   </div>
 </div>

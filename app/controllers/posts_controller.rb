@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -42,17 +44,18 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
-      redirect_to posts_url, notice: 'Post was successfully destroyed.'
+    redirect_to posts_url, notice: 'Post was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:title, :summary, :body, :active, :category)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def post_params
+    params.require(:post).permit(:title, :summary, :body, :active, :category_id)
+  end
 end
