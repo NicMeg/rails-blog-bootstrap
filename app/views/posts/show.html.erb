@@ -6,4 +6,5 @@
 <p>Total entries for Posts: <%= Post.total  %></p>
 <%= simple_format @post.body %>
 
-<%= render partial: "posts/view_form", locals: { post: @post } %>
+<%= render partial: "view_form", locals: { post: @post } %>
+

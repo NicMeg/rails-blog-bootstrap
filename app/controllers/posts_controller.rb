@@ -8,6 +8,16 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    respond_to do |format|
+      format.html
+      format.json {
+        render json: @post.to_json
+      }
+      format.text {
+        render plain: @post
+      }
+      #BUG - Not rendering plain text 
+    end
   end
 
   # GET /posts/new
@@ -46,8 +56,9 @@ class PostsController < ApplicationController
   end
 
   def save_post_view
+    # raise
     #increment view count
-    @post.incremenet(:views, 1).save
+    @post.increment(:views, 1).save
   end
 
   private
