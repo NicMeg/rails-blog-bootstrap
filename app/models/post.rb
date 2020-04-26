@@ -22,6 +22,6 @@ class Post < ApplicationRecord
   private
 
   def update_total_posts_count
-    category.increment(:total_count, 1)
+    category.increment!(:total_count, 1)
   end
 end
